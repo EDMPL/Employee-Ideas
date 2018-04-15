@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<odoo>
+	<report
+		id="action_report"
+		model="employee.ideas"
+		string="Print"
+		report_type="qweb-pdf"
+		name="todo-report.report_template"/>
+		
+	<template id="report_template">
+		<t t-call="report.html_container">
+				<t t-call="report.external_layout">
+					<div class="page">
+						<t t-foreach="docs" t-as="d">
+							<div class="col-xs-2">Title
+										<span t-field="d.title"/>
+							</div>
+							<div class="col-xs-2">Employee
+								<div class="row">
+									<span t-field="d.employee"/>
+								</div>
+							</div>
+							<div class="col-xs-1">Create Date
+								</div><span t-field="d.create_date"/>
+							<div class="col-xs-2">Departement
+									<span t-field="d.department"/>
+							</div>
+							<div class="col-xs-2">Deadline
+									<span t-field="d.deadline"/>
+							</div>
+						</t> 
+					</div>
+				</t>
+			</t>
+	</template>
+</odoo>
