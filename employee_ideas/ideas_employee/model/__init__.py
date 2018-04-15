@@ -1,1 +1,0 @@
-from . import ideas_model
