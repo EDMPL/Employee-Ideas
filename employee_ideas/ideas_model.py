@@ -22,18 +22,31 @@ class EmployeeIdeas(models.Model):
 	comments = fields.Char('Comments')
 	rating = fields.Char('Rating')
 	tree_notebook = fields.One2many('employee.ideas', 'employee')
+
+	@api.multi
+	def do_vote(self):
+		self.ensure_one()
+		self.write({'state': 'approved'})
+		return{
+			'type':'ir.actions.act_window',
+			'res_model':'ideas.wizard',
+			'view_type':'form',
+			'view_mode':'form',
+			'target':'new',
+		}
+
 	@api.one
 	def waiting_progressbar(self):
 		self.write({'state': 'waiting'})
-		
+
 	@api.one
 	def approve_progressbar(self):
 		self.write({'state': 'approved'})
-		
+
 	@api.one
 	def reject_progressbar(self):
 		self.write({'state': 'new'})
-	
+
 	@api.one
 	def _vote(self):
 		count = 10

@@ -1,0 +1,22 @@
+<odoo>
+	<record id="Wizard Employee" model="ir.ui.view">
+		<field name="name">Wizard_Ideas</field>
+		<field name="model">ideas.wizard</field>
+		<field name="arch" type="xml">
+		
+			<form>
+				<field name="rating" widget="priority"></field>
+				<field name="comment"></field>
+			</form>
+		</field>
+	</record>
+	
+<record id="give_vote" model="ir.actions.act_window">
+	<field name="name">Employee Votes</field>
+	<field name="type">ir.actions.act_window</field>
+	<field name="res_model">ideas.wizard</field>
+	<field name="view_type">form</field>
+	<field name="view_mode">form</field>
+	<field name="target">new</field>
+</record>
+</odoo>
