@@ -4,34 +4,68 @@
 	<report
 		id="action_report"
 		model="employee.ideas"
-		string="Print"
+		string="Print Idea"
 		report_type="qweb-pdf"
-		name="todo-report.report_template"/>
+		name="todo-report.report_template"
+		file="todo-report.report_template"/>
 		
 	<template id="report_template">
 		<t t-call="report.html_container">
+			<t t-foreach="docs" t-as="d">
 				<t t-call="report.external_layout">
 					<div class="page">
-						<t t-foreach="docs" t-as="d">
-							<div class="col-xs-2">Title
-										<span t-field="d.title"/>
-							</div>
-							<div class="col-xs-2">Employee
-								<div class="row">
-									<span t-field="d.employee"/>
-								</div>
-							</div>
-							<div class="col-xs-1">Create Date
-								</div><span t-field="d.create_date"/>
-							<div class="col-xs-2">Departement
-									<span t-field="d.department"/>
-							</div>
-							<div class="col-xs-2">Deadline
-									<span t-field="d.deadline"/>
-							</div>
-						</t> 
+					<!-- Tampilanampilan -->
+					<table class="table">
+						<tr>
+						</tr>
+						<tr>
+							<th>Title</th> 
+							<td> <span t-field="d.title"/> </td>
+						</tr>
+						<tr>
+							<th><strong>Employee</strong></th>
+							<td> <span t-field="d.employee"/> </td>
+							<th><strong>Departement</strong></th>
+							<td> <span t-field="d.department"/> </td>
+						</tr>
+						<tr>
+							<th><strong>Create Date</strong></th>
+							<td> <span t-field="d.create_date"/> </td>
+							<th><strong>Deadline</strong></th>
+							<td> <span t-field="d.deadline"/> </td>
+						</tr>
+					</table>
+					<h2>Idea Detail</h2>
+					 <table class="table table-bordered" style="table-layout:auto">
+		                <thead>
+		                    <tr>
+							<td> <span t-field="d.details"/> </td>
+		                    </tr>
+		               </thead>
+					</table>
+					
+					<h2>Votes Tracked</h2>
+					 <table class="table table-bordered" style="table-layout:auto; border: 1px solid black">
+		                <thead>
+		                    <tr style="background-color: #EAEAEA">
+		                        <th class="text-center">Employee</th>
+								<th class="text-center">Departments</th>
+		                        <th class="text-center">Comment</th>
+								<th class="text-center">Rating</th>
+							</tr>
+							<tr>
+								<td> <span t-field="d.employee"/> </td>
+								<td> <span t-field="d.department"/> </td>
+								<td> <span t-field="d.comments"/> </td>
+								<td> <span t-field="d.rating"/> </td>
+		                    </tr>
+		               </thead>
+		              
+					</table>
+					
 					</div>
 				</t>
 			</t>
+		</t>
 	</template>
 </odoo>
