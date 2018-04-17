@@ -5,8 +5,10 @@
 		<field name="arch" type="xml">
 		
 			<form>
-				<field name="rating" widget="priority"></field>
-				<field name="comment"></field>
+				<h2>Rating</h2>
+				<field name="rating" widget="priority" style="width:200px"></field>
+				<h2>Your Comments</h2>
+				<field name="comment" placeholder="Post Your Comments" style="height:100px"></field>
 			</form>
 		</field>
 	</record>

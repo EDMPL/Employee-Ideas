@@ -14,6 +14,8 @@
 						string="Reject" class="oe_highlight" />
 					<button type="object" name="do_vote" attrs="{'invisible': [('state','!=','approved')]}"
 						string="Give Vote" class="oe_highlight" />
+					<button type="object" name="closed_progressbar" attrs="{'invisible': [('state','!=','approved')]}"
+						string="Close" class="oe_highlight" />
 					<field name="state" widget="statusbar"/>
 				</header>
 				<sheet>

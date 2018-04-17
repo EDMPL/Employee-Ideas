@@ -11,7 +11,7 @@ class EmployeeIdeas(models.Model):
             ('closed', 'Closed'),
             ],default='new')
 	title = fields.Char('Title', required=True)
-	employee = fields.Many2one('res.users', 'Employee')
+	employee = fields.Many2one('hr.employee', 'Employee')
 	create_date = fields.Date('Create Date')
 	company = fields.Many2one('res.company', 'Company')
 	department = fields.Many2one('hr.department', 'Department')
@@ -46,8 +46,13 @@ class EmployeeIdeas(models.Model):
 	@api.one
 	def reject_progressbar(self):
 		self.write({'state': 'new'})
+	
+	@api.one
+	def closed_progressbar(self):
+		self.write({'state': 'closed'})
 
 	@api.one
 	def _vote(self):
 		count = 10
 		return count
+
