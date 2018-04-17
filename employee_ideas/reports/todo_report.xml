@@ -6,8 +6,8 @@
 		model="employee.ideas"
 		string="Print Idea"
 		report_type="qweb-pdf"
-		name="todo-report.report_template"
-		file="todo-report.report_template"/>
+		name="employee_ideas.report_template"
+		file="employee_ideas.report_template"/>
 		
 	<template id="report_template">
 		<t t-call="report.html_container">
