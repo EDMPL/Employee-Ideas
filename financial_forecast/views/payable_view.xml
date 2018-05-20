@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <odoo>
-    <record id="view_form_sale_forecast" model="ir.ui.view">
-        <field name="name">Receivable</field>
-        <field name="model">receivable.forecast</field>
+    <record id="view_form_payable_forecast" model="ir.ui.view">
+        <field name="name">Payable</field>
+        <field name="model">payable.forecast</field>
         <field name="arch" type="xml">
             <form string="Receivable">
                 <header>
