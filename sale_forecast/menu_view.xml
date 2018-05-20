@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<odoo>
+<record model="ir.actions.act_window" id="sale_forecast">
+        <field name="name">Forecast</field>
+        <field name="res_model">receivable.forecast</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first Example
+            </p>
+        </field>
+    </record>
+
+	<menuitem id="receivable_menu" name="Sale Forecast" action="sale_forecast"/>
+	
+   
+</odoo>
