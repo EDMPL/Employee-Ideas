@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<odoo>
+    
+	<record model="ir.actions.act_window" id="forecast_payable">
+        <field name="name">Payable</field>
+        <field name="res_model">employee.ideas</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the New Payable
+            </p>
+        </field>
+    </record>
+	
+	<record model="ir.actions.act_window" id="forecast_others">
+        <field name="name">Others</field>
+        <field name="res_model">employee.ideas</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the New Other Cash Out
+            </p>
+        </field>
+    </record>
+	
+		<record model="ir.actions.act_window" id="forecast_receivable">
+        <field name="name">Receivable</field>
+        <field name="res_model">employee.ideas</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the New Receivable
+            </p>
+        </field>
+    </record>
+	
+	
+	
+    <menuitem id="menu_sale_forecast" name="Forecast"/>
+	
+    <menuitem id="menu_forecast" name="Forecast"
+            parent="menu_sale_forecast"/>
+			
+    <menuitem id="menu_cashout" name="Cash Out"
+            parent="menu_sale_forecast"/>
+			
+    <menuitem id="submenu_cashout" name="Payable" parent="menu_cashout"
+        action="forecast_payable"/>
+		
+	<menuitem id="submenu_cashout1" name="Others" parent="menu_cashout"
+        action="forecast_others"/>
+		
+	<menuitem id="menu_cashin" name="Cash In"
+            parent="menu_sale_forecast"/>
+			
+	<menuitem id="submenu_cashin" name="Receivable" parent="menu_cashin"
+        action="forecast_receivable"/>
+     
+	
+</odoo>
