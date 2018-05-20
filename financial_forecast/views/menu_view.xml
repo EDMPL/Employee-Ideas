@@ -1,56 +1,82 @@
 <?xml version="1.0" encoding ="UTF-8"?>
 <odoo>
-    <record model="ir.actions.act_window" id="receivable_forecast">
-        <field name="name">Receivable</field>
-        <field name="res_model">receivable.forecast</field>
-        <field name="view_type">form</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Create the first Example
-            </p>
-        </field>
-    </record>
 
-    <record model="ir.actions.act_window" id="payable_forecast">
-        <field name="name">Payable</field>
+<record model="ir.actions.act_window" id="payable_forecast">
+        <field name="name">Pembayaran</field>
         <field name="res_model">payable.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Create the first Example
+            <p class="oe_view_nocontent_create">Buat data Pembayaran baru
             </p>
         </field>
     </record>
+	
+<record model="ir.actions.act_window" id="others_forecast">
+        <field name="name">Lain-lain</field>
+        <field name="res_model">payable.forecast</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Buat data Pembayaran Lainnya
+            </p>
+        </field>
+    </record>
+	
+	
+    <record model="ir.actions.act_window" id="receivable_forecast">
+        <field name="name">Pendapatan</field>
+        <field name="res_model">receivable.forecast</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Buat data Pendapatan baru
+            </p>
+        </field>
+    </record>
+
+    
 
 	<menuitem 
         id="main_menu" 
         name="Forecast"
     />
 	
-    <menuitem 
+	
+   <menuitem 
         id="menu_cashin" 
-        name="Cash In" 
+        name="Pemasukan" 
         parent="main_menu"
     />
 
     <menuitem 
         id="receivable_menu" 
-        name="Receivable" 
+        name="Pendapatan" 
         parent="menu_cashin"
         action="receivable_forecast"
     />
-
-    <menuitem
+	
+ <menuitem
         id="menu_cashout"
-        name="Cash Out"
+        name="Pengeluaran"
         parent="main_menu"
     />
 
     <menuitem
         id="payable_menu"
-        name="Payable"
+        name="Pembayaran"
         parent="menu_cashout"
         action="payable_forecast"
     />
+	
+	 <menuitem
+        id="others_menu"
+        name="Lain-lain"
+        parent="menu_cashout"
+        action="others_forecast"
+    />
+	
+
+   
    
 </odoo>

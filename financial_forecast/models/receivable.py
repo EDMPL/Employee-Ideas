@@ -3,8 +3,8 @@ from odoo import models, fields, api
 class Receivable(models.Model):
 	_name = 'receivable.forecast'
 	_description = 'receivable'
-	description = fields.Char('Description', required=True)
-	customer = fields.Char('Customer Name', required=True)
-	order_date = fields.Date('Order Date')
-	deadline = fields.Date('Deadline', required=True)
-	revenue = fields.Integer('Revenue')
+	nama = fields.Char('Nama', required=True)
+	kategori = fields.Char('Kategori')
+	tanggal_peminjaman = fields.Date('Tanggal Peminjaman')
+	tenggat_waktu = fields.Date('Tenggat Waktu', required=True)
+	total_biaya  = fields.Integer('Total Biaya')

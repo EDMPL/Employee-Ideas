@@ -4,20 +4,20 @@
         <field name="name">Payable</field>
         <field name="model">payable.forecast</field>
         <field name="arch" type="xml">
-            <form string="Receivable">
+            <form string="Payable">
                 <header>
                     
                 </header>
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="description"/>
-							<field name="customer"/>
-							<field name="order_date"/>
+                            <field name="nama"/>
+							<field name="kategori"/>
+							<field name="tanggal_peminjaman"/>
                         </group>
                         <group name="group_right">
-                             <field name="deadline"/>
-							 <field name="revenue"/>
+                             <field name="tenggat_waktu"/>
+							 <field name="total_biaya"/>
                         </group>
                     </group>
                 </sheet>
