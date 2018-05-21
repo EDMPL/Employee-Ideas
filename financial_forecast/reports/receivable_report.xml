@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+
+<odoo>
+	<report
+		id="action_report"
+		model="receivable.forecast"
+		string="Print Dokumen"
+		report_type="qweb-pdf"
+		name="financial_forecast.report_template"
+		file="financial_forecast.report_template"/>
+		
+	<template id="report_template">
+		<t t-call="report.html_container">
+			<t t-foreach="docs" t-as="d">
+				<t t-call="report.external_layout">
+					<div class="page">
+					<!-- Tampilanampilan -->
+					<table class="table">
+						<tr>
+						</tr>
+						<tr>
+							<th>Nama</th> 
+							<td> <span t-field="d.nama"/> </td>
+						</tr>
+						<tr>
+							<th><strong>Kategori</strong></th>
+							<td> <span t-field="d.kategori"/> </td>
+							<th><strong>Tanggal Peminjaman</strong></th>
+							<td> <span t-field="d.tanggal_peminjaman"/> </td>
+						</tr>
+						<tr>
+							<th><strong>Tenggat Waktu</strong></th>
+							<td> <span t-field="d.tenggat_waktu"/> </td>
+							<th><strong>Total Biaya</strong></th>
+							<td> <span t-field="d.total_biaya"/> </td>
+						</tr>
+					</table>
+				
+					
+					<h2>Pendapatan</h2>
+					 <table class="table table-bordered" style="table-layout:auto; border: 1px solid black">
+		                <thead>
+		                    <tr style="background-color: #EAEAEA">
+		                        <th class="text-center">Nama</th>
+								<th class="text-center">Kategori</th>
+		                        <th class="text-center">Tanggal Peminjaman</th>
+								<th class="text-center">Tenggat Waktu</th>
+								<th class="text-center">Total Biaya</th>
+							</tr>
+							<tr>
+								<td> <span t-field="d.nama"/> </td>
+								<td> <span t-field="d.kategori"/> </td>
+								<td> <span t-field="d.tanggal_peminjaman"/> </td>
+								<td> <span t-field="d.tenggat_waktu"/> </td>
+								<td> <span t-field="d.total_biaya"/> </td>
+
+		                    </tr>
+		               </thead>
+		              
+					</table>
+					
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+</odoo>
