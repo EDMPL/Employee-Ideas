@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <odoo>
-    <record id="view_form_receivable_forecast" model="ir.ui.view">
-        <field name="name">Receivable</field>
-        <field name="model">receivable.forecast</field>
+    <record id="view_form_others_forecast" model="ir.ui.view">
+        <field name="name">Others</field>
+        <field name="model">others.forecast</field>
         <field name="arch" type="xml">
-            <form string="Receivable">
+            <form string="Others">
                 <header>
                     
                 </header>
@@ -25,9 +25,9 @@
         </field>
     </record>
 	
-	<record id="view_tree_receivable_forecast" model="ir.ui.view">
-		<field name="name">Receivable Forecast Tree</field>
-		<field name="model">receivable.forecast</field>
+	<record id="view_tree_others_forecast" model="ir.ui.view">
+		<field name="name">Others Forecast Tree</field>
+		<field name="model">others.forecast</field>
 		<field name="arch" type="xml">
 			<tree>
 				<field name="nama"/>
@@ -39,9 +39,9 @@
 		</field>
 	</record>
 	
-	<record id="view_filter_receivable_forecast" model="ir.ui.view">
-		<field name="name">Receivable Forecast Filter</field>
-		<field name="model">receivable.forecast</field>
+	<record id="view_filter_others_forecast" model="ir.ui.view">
+		<field name="name">Others Forecast Filter</field>
+		<field name="model">others.forecast</field>
 		<field name="arch" type="xml">
 			<search>
 				<field name="nama"/>
