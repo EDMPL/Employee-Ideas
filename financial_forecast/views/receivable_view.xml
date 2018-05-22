@@ -20,11 +20,20 @@
 							 <field name="total_biaya"/>
                         </group>
                     </group>
-                </sheet>
+					
+					<notebook>
+                        <page name="keterangan_page" string="Keterangan">
+                            <field name="keterangan" placeholder="Keterangan..." style="height: 100px;"/>
+                        </page>
+					</notebook>
+                
+				</sheet>
             </form>
         </field>
     </record>
 	
+				
+		
 	<record id="view_tree_receivable_forecast" model="ir.ui.view">
 		<field name="name">Receivable Forecast Tree</field>
 		<field name="model">receivable.forecast</field>

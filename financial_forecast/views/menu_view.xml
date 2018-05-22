@@ -36,12 +36,12 @@
     </record>
 
     <record model="ir.actions.act_window" id="category_forecast">
-        <field name="name">Category</field>
+        <field name="name">Kategori</field>
         <field name="res_model">category.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Create new category
+            <p class="oe_view_nocontent_create">Buat kategori baru 
             </p>
         </field>
     </record>
@@ -98,7 +98,7 @@
 
     <menuitem
         id="category_menu"
-        name="Category"
+        name="Kategori"
         parent="menu_configuration"
         action="category_forecast"
     />

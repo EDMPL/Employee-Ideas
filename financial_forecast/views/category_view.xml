@@ -11,7 +11,7 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="name"/>
+                            <field name="kategori"/>
                         </group>
                         <group name="group_right">
                         </group>
@@ -20,4 +20,24 @@
             </form>
         </field>
     </record>
+	
+	<record id="view_tree_category_forecast" model="ir.ui.view">
+		<field name="name">Category Forecast Tree</field>
+		<field name="model">category.forecast</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="kategori"/>
+			</tree>
+		</field>
+	</record>
+	
+	<record id="view_filter_category_forecast" model="ir.ui.view">
+		<field name="name">Kategori Forecast Filter</field>
+		<field name="model">category.forecast</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="kategori"/>
+			</search>
+		</field>
+	</record>
 </odoo>

@@ -3,6 +3,6 @@ from odoo import models, fields, api
 class CashCategory(models.Model):
     _name = 'category.forecast'
     _description = 'Cash Flow Category'
-    name = fields.Char('Name', required=True)
+    kategori = fields.Char('Nama Kategori', required=True)
 
     
