@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_category_forecast" model="ir.ui.view">
+        <field name="name">Category</field>
+        <field name="model">category.forecast</field>
+        <field name="arch" type="xml">
+            <form string="Category">
+                <header>
+                    
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="name"/>
+                        </group>
+                        <group name="group_right">
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

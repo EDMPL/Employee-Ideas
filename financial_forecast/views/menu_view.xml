@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding ="UTF-8"?>
 <odoo>
 
-<record model="ir.actions.act_window" id="payable_forecast">
+    <record model="ir.actions.act_window" id="payable_forecast">
         <field name="name">Pembayaran</field>
         <field name="res_model">payable.forecast</field>
         <field name="view_type">form</field>
@@ -12,9 +12,9 @@
         </field>
     </record>
 	
-<record model="ir.actions.act_window" id="others_forecast">
+    <record model="ir.actions.act_window" id="others_forecast">
         <field name="name">Lain-lain</field>
-        <field name="res_model">payable.forecast</field>
+        <field name="res_model">others.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
@@ -35,15 +35,29 @@
         </field>
     </record>
 
-    
+    <record model="ir.actions.act_window" id="category_forecast">
+        <field name="name">Category</field>
+        <field name="res_model">category.forecast</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create new category
+            </p>
+        </field>
+    </record>
 
 	<menuitem 
         id="main_menu" 
         name="Forecast"
     />
 	
+    <menuitem
+        id="forecast"
+        name="Forecast"
+        parent="main_menu"
+    />
 	
-   <menuitem 
+    <menuitem 
         id="menu_cashin" 
         name="Pemasukan" 
         parent="main_menu"
@@ -56,7 +70,7 @@
         action="receivable_forecast"
     />
 	
- <menuitem
+    <menuitem
         id="menu_cashout"
         name="Pengeluaran"
         parent="main_menu"
@@ -69,14 +83,24 @@
         action="payable_forecast"
     />
 	
-	 <menuitem
+	<menuitem
         id="others_menu"
         name="Lain-lain"
         parent="menu_cashout"
         action="others_forecast"
     />
-	
 
-   
+    <menuitem
+        id="menu_configuration"
+        name="Configuration"
+        parent="main_menu"
+    />  
+
+    <menuitem
+        id="category_menu"
+        name="Category"
+        parent="menu_configuration"
+        action="category_forecast"
+    />
    
 </odoo>
