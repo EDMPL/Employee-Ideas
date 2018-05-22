@@ -24,28 +24,4 @@
             </form>
         </field>
     </record>
-	
-	<record id="view_tree_receivable_forecast" model="ir.ui.view">
-		<field name="name">Receivable Forecast Tree</field>
-		<field name="model">receivable.forecast</field>
-		<field name="arch" type="xml">
-			<tree>
-				<field name="nama"/>
-				<field name="kategori"/>
-				<field name="tanggal_peminjaman"/>
-				<field name="tenggat_waktu"/>
-				<field name="total_biaya"/>
-			</tree>
-		</field>
-	</record>
-	
-	<record id="view_filter_receivable_forecast" model="ir.ui.view">
-		<field name="name">Receivable Forecast Filter</field>
-		<field name="model">receivable.forecast</field>
-		<field name="arch" type="xml">
-			<search>
-				<field name="nama"/>
-			</search>
-		</field>
-	</record>
 </odoo>
