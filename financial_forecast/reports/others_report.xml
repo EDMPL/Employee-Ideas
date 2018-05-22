@@ -2,39 +2,19 @@
 
 <odoo>
 	<report
-		id="action_report"
+		id="action_others"
 		model="others.forecast"
-		string="Print Dokumen"
+		string="Pembayaran Lainnya"
 		report_type="qweb-pdf"
-		name="financial_forecast.report_template"
-		file="financial_forecast.report_template"/>
+		name="financial_forecast.others_template"
+		file="financial_forecast/views/others_view.others_template"/>
 		
-	<template id="report_template">
+	<template id="others_template">
 		<t t-call="report.html_container">
 			<t t-foreach="docs" t-as="d">
 				<t t-call="report.external_layout">
 					<div class="page">
-					<!-- Tampilanampilan -->
-					<table class="table">
-						<tr>
-						</tr>
-						<tr>
-							<th>Nama</th> 
-							<td> <span t-field="d.nama"/> </td>
-						</tr>
-						<tr>
-							<th><strong>Kategori</strong></th>
-							<td> <span t-field="d.kategori"/> </td>
-							<th><strong>Tanggal Peminjaman</strong></th>
-							<td> <span t-field="d.tanggal_peminjaman"/> </td>
-						</tr>
-						<tr>
-							<th><strong>Tenggat Waktu</strong></th>
-							<td> <span t-field="d.tenggat_waktu"/> </td>
-							<th><strong>Total Biaya</strong></th>
-							<td> <span t-field="d.total_biaya"/> </td>
-						</tr>
-					</table>
+				
 				
 					
 					<h2>Pembayaran Lainnya</h2>
