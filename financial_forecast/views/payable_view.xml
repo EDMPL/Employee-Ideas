@@ -24,28 +24,4 @@
             </form>
         </field>
     </record>
-	
-	<record id="view_tree_payable_forecast" model="ir.ui.view">
-		<field name="name">Payable Forecast Tree</field>
-		<field name="model">payable.forecast</field>
-		<field name="arch" type="xml">
-			<tree>
-				<field name="nama"/>
-				<field name="kategori"/>
-				<field name="tanggal_peminjaman"/>
-				<field name="tenggat_waktu"/>
-				<field name="total_biaya"/>
-			</tree>
-		</field>
-	</record>
-	
-	<record id="view_filter_payable_forecast" model="ir.ui.view">
-		<field name="name">Payable Forecast Filter</field>
-		<field name="model">payable.forecast</field>
-		<field name="arch" type="xml">
-			<search>
-				<field name="nama"/>
-			</search>
-		</field>
-	</record>
 </odoo>
