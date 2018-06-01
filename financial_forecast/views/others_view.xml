@@ -20,6 +20,13 @@
 							 <field name="total_biaya"/>
                         </group>
                     </group>
+					
+					<notebook>
+                        <page name="keterangan_page" string="Keterangan">
+                            <field name="keterangan" placeholder="Keterangan..." style="height: 100px;"/>
+                        </page>
+					</notebook>
+					
                 </sheet>
             </form>
         </field>
