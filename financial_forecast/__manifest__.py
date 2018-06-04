@@ -2,7 +2,7 @@
 	'name': 'Financial Forecast',
 	'description': 'Help You Manage Your Financial',
 	'author': 'A3 - JTK2016',
-	'depends':['base'],
+	'depends':['base','ir.model.access'],
 	'application': True,
 	'data': [
 		'reports/receivable_report.xml',
