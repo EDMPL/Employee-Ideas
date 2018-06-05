@@ -22,14 +22,14 @@
 		                    <tr style="background-color: #EAEAEA">
 		                        <th class="text-center">Nama</th>
 								<th class="text-center">Kategori</th>
-		                        <th class="text-center">Tanggal Peminjaman</th>
+		                        <th class="text-center">Tanggal Transaksi</th>
 								<th class="text-center">Tenggat Waktu</th>
 								<th class="text-center">Total Biaya</th>
 							</tr>
 							<tr>
 								<td> <span t-field="d.nama"/> </td>
 								<td> <span t-field="d.kategori"/> </td>
-								<td> <span t-field="d.tanggal_peminjaman"/> </td>
+								<td> <span t-field="d.tanggal_transaksi"/> </td>
 								<td> <span t-field="d.tenggat_waktu"/> </td>
 								<td> <span t-field="d.total_biaya"/> </td>
 

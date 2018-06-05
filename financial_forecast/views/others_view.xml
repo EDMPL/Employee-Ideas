@@ -13,7 +13,7 @@
                         <group name="group_left">
                             <field name="nama"/>
 							<field name="kategori"/>
-							<field name="tanggal_peminjaman"/>
+							<field name="tanggal_transaksi"/>
                         </group>
                         <group name="group_right">
                              <field name="tenggat_waktu"/>
@@ -39,7 +39,7 @@
 			<tree>
 				<field name="nama"/>
 				<field name="kategori"/>
-				<field name="tanggal_peminjaman"/>
+				<field name="tanggal_transaksi"/>
 				<field name="tenggat_waktu"/>
 				<field name="total_biaya"/>
 			</tree>

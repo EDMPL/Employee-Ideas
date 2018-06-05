@@ -8,6 +8,6 @@ class Receivable(models.Model):
 	nama = fields.Char('Nama', required=True)
 	kategori = fields.Many2one('category.forecast', string='Category')
 	keterangan = fields.Char('Keterangan', required=True)
-	tanggal_peminjaman = fields.Date('Tanggal Peminjaman')
+	tanggal_transaksi = fields.Date('Tanggal Transaksi')
 	tenggat_waktu = fields.Date('Tenggat Waktu', required=True)
 	total_biaya  = fields.Integer('Total Biaya')
