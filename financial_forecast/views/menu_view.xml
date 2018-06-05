@@ -92,7 +92,7 @@
 
     <menuitem
         id="menu_configuration"
-        name="Configuration"
+        name="Pengaturan"
         parent="main_menu"
     />  
 
