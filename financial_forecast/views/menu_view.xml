@@ -18,7 +18,7 @@
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Buat data Hutang Lainnya
+            <p class="oe_view_nocontent_create">Buat data Pengeluaran Lainnya
             </p>
         </field>
     </record>
