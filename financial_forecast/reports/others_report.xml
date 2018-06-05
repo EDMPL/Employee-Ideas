@@ -4,7 +4,7 @@
 	<report
 		id="action_others"
 		model="others.forecast"
-		string="Pembayaran Lainnya"
+		string="Hutang Lainnya"
 		report_type="qweb-pdf"
 		name="financial_forecast.others_template"
 		file="financial_forecast/views/others_view.others_template"/>
@@ -17,7 +17,7 @@
 				
 				
 					
-					<h2>Pembayaran Lainnya</h2>
+					<h2>Hutang Lainnya</h2>
 					 <table class="table table-bordered" style="table-layout:auto; border: 1px solid black">
 		                <thead>
 		                    <tr style="background-color: #EAEAEA">

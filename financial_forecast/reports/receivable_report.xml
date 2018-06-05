@@ -4,7 +4,7 @@
 	<report
 		id="action_receivable"
 		model="receivable.forecast"
-		string="Pendapatan"
+		string="Piutang"
 		report_type="qweb-pdf"
 		name="financial_forecast.receivable_template"
 		file="financial_forecast/views/receivable_view.receivable_template"/>
@@ -16,7 +16,7 @@
 					<div class="page">
 					
 					
-					<h2>Pendapatan</h2>
+					<h2>Piutang</h2>
 					 <table class="table table-bordered" style="table-layout:auto; border: 1px solid black">
 		                <thead>
 		                    <tr style="background-color: #EAEAEA">

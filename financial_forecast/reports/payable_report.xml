@@ -4,7 +4,7 @@
 	<report
 		id="action_payable"
 		model="payable.forecast"
-		string="Pembayaran"
+		string="Hutang"
 		report_type="qweb-pdf"
 		name="financial_forecast.payable_template"
 		file="financial_forecast/views/payable_view.payable_template"/>
@@ -16,7 +16,7 @@
 					<div class="page">
 					
 					
-					<h2>Pembayaran</h2>
+					<h2>Hutang</h2>
 					 <table class="table table-bordered" style="table-layout:auto; border: 1px solid black">
 		                <thead>
 		                    <tr style="background-color: #EAEAEA">

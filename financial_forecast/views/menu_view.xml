@@ -2,12 +2,12 @@
 <odoo>
 
     <record model="ir.actions.act_window" id="payable_forecast">
-        <field name="name">Pembayaran</field>
+        <field name="name">Hutang</field>
         <field name="res_model">payable.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Buat data Pembayaran baru
+            <p class="oe_view_nocontent_create">Buat data Hutang baru
             </p>
         </field>
     </record>
@@ -18,19 +18,19 @@
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Buat data Pembayaran Lainnya
+            <p class="oe_view_nocontent_create">Buat data Hutang Lainnya
             </p>
         </field>
     </record>
 	
 	
     <record model="ir.actions.act_window" id="receivable_forecast">
-        <field name="name">Pendapatan</field>
+        <field name="name">Piutang</field>
         <field name="res_model">receivable.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Buat data Pendapatan baru
+            <p class="oe_view_nocontent_create">Buat data Piutang baru
             </p>
         </field>
     </record>
@@ -65,7 +65,7 @@
 
     <menuitem 
         id="receivable_menu" 
-        name="Pendapatan" 
+        name="Piutang" 
         parent="menu_cashin"
         action="receivable_forecast"
     />
@@ -78,7 +78,7 @@
 
     <menuitem
         id="payable_menu"
-        name="Pembayaran"
+        name="Hutang"
         parent="menu_cashout"
         action="payable_forecast"
     />
