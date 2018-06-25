@@ -4,7 +4,7 @@
 	<report
 		id="action_others"
 		model="others.forecast"
-		string="Hutang Lainnya"
+		string="Others"
 		report_type="qweb-pdf"
 		name="financial_forecast.others_template"
 		file="financial_forecast/views/others_view.others_template"/>
@@ -17,19 +17,19 @@
 				
 				
 					
-					<h2>Hutang Lainnya</h2>
+					<h2>Others</h2>
 					 <table class="table table-bordered" style="table-layout:auto; border: 1px solid black">
 		                <thead>
 		                    <tr style="background-color: #EAEAEA">
-		                        <th class="text-center">Nama</th>
-								<th class="text-center">Kategori</th>
-		                        <th class="text-center">Tanggal Transaksi</th>
-								<th class="text-center">Tenggat Waktu</th>
-								<th class="text-center">Total Biaya</th>
+		                        <th class="text-center">Name</th>
+								<th class="text-center">Category</th>
+		                        <th class="text-center">Transaction Date</th>
+								<th class="text-center">Deadline</th>
+								<th class="text-center">Total Amount</th>
 							</tr>
 							<tr>
-								<td> <span t-field="d.nama"/> </td>
-								<td> <span t-field="d.kategori"/> </td>
+								<td> <span t-field="d.Name"/> </td>
+								<td> <span t-field="d.Category"/> </td>
 								<td> <span t-field="d.tanggal_transaksi"/> </td>
 								<td> <span t-field="d.tenggat_waktu"/> </td>
 								<td> <span t-field="d.total_biaya"/> </td>
@@ -38,6 +38,19 @@
 		               </thead>
 		              
 					</table>
+					<!-- Total-->
+			<div class="row">
+				<div class="col-xs-3">
+					Count : <t t-esc="len(docs)"/>
+				</div>
+				<div class="col-xs-2"/>
+				<div class="col-xs-1">
+					Total :
+					<t t-esc="sum([o.total_biaya for o in docs])" />
+				</div>
+				<div class="col-xs-3" />
+				<div class="col-xs-3" />
+			</div>
 					
 					</div>
 				</t>

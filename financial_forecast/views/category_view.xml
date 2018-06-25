@@ -32,7 +32,7 @@
 	</record>
 	
 	<record id="view_filter_category_forecast" model="ir.ui.view">
-		<field name="name">Kategori Forecast Filter</field>
+		<field name="name">Category Forecast Filter</field>
 		<field name="model">category.forecast</field>
 		<field name="arch" type="xml">
 			<search>
