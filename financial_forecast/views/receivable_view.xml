@@ -11,8 +11,8 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="Name"/>
-							<field name="Category"/>
+                            <field name="nama"/>
+							<field name="kategori"/>
 							<field name="tanggal_transaksi"/>
                         </group>
                         <group name="group_right">
@@ -22,8 +22,8 @@
                     </group>
 					
 					<notebook>
-                        <page name="Internal Note_page" string="Internal Note">
-                            <field name="Internal_Note" placeholder="Internal Note..." style="height: 100px;"/>
+                        <page name="keterangan_page" string="Keterangan">
+                            <field name="keterangan" placeholder="Keterangan..." style="height: 100px;"/>
                         </page>
 					</notebook>
                 
@@ -39,8 +39,8 @@
 		<field name="model">receivable.forecast</field>
 		<field name="arch" type="xml">
 			<tree>
-				<field name="Name"/>
-				<field name="Category"/>
+				<field name="nama"/>
+				<field name="kategori"/>
 				<field name="tanggal_transaksi"/>
 				<field name="tenggat_waktu"/>
 				<field name="total_biaya"/>
@@ -53,7 +53,7 @@
 		<field name="model">receivable.forecast</field>
 		<field name="arch" type="xml">
 			<search>
-				<field name="Name"/>
+				<field name="nama"/>
 			</search>
 		</field>
 	</record>

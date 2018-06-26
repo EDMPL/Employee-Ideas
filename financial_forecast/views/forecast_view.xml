@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_table_forecast" model="ir.ui.view">
+        <field name="name">Forecast</field>
+        <field name="model">report.forecast</field>
+        <field name="arch" type="xml">
+            <pivot string="Forecast">
+                <field name="tanggal" type="col"/>
+                <field name="payable_id" type="row"/>
+                <field name="receivable_id" type="row"/>
+                <field name="others_id" type="row"/>
+                <field name="total_biaya" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+</odoo>

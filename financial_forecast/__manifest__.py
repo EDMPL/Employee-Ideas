@@ -9,6 +9,7 @@
 		'reports/others_report.xml',
 		'reports/payable_report.xml',
 		'views/category_view.xml',
+		'views/forecast_view.xml',
 		'views/others_view.xml',
 		'views/payable_view.xml', 
 		'views/receivable_view.xml', 

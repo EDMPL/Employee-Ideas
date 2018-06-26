@@ -4,9 +4,9 @@ class Payable(models.Model):
 	_name = 'payable.forecast'
 	_description = 'payable'
 	
-	Name = fields.Char('Name', required=True)
-	Category = fields.Many2one('category.forecast', 'Category')
-	Internal_Note = fields.Char('Internal Note', required=True)
-	tanggal_transaksi = fields.Date('Transaction Date')
-	tenggat_waktu = fields.Date('Deadline', required=True)
-	total_biaya  = fields.Integer('Total Amount')
+	nama = fields.Char('Nama', required=True)
+	kategori = fields.Many2one('category.forecast', string='Category')
+	keterangan = fields.Char('Keterangan', required=True)
+	tanggal_transaksi = fields.Date('Tanggal Transaksi')
+	tenggat_waktu = fields.Date('Tenggat Waktu', required=True)
+	total_biaya  = fields.Integer('Total Biaya')
