@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding ="UTF-8"?>
 <odoo>
 
+    <record model="ir.actions.act_window" id="report_forecast">
+        <field name="name">Forecast</field>
+        <field name="res_model">report.forecast</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot</field>      
+    </record>
+
     <record model="ir.actions.act_window" id="payable_forecast">
-        <field name="name">Payable</field>
+        <field name="name">Hutang</field>
         <field name="res_model">payable.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create"> Create New Payable
+            <p class="oe_view_nocontent_create">Buat data Hutang baru
             </p>
         </field>
     </record>
 	
     <record model="ir.actions.act_window" id="others_forecast">
-        <field name="name">Others</field>
+        <field name="name">Lain-lain</field>
         <field name="res_model">others.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Create New Others Cash Out
+            <p class="oe_view_nocontent_create">Buat data Hutang Lainnya
             </p>
         </field>
     </record>
 	
 	
     <record model="ir.actions.act_window" id="receivable_forecast">
-        <field name="name">Receivable</field>
+        <field name="name">Piutang</field>
         <field name="res_model">receivable.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Create New Receivable
+            <p class="oe_view_nocontent_create">Buat data Piutang baru
             </p>
         </field>
     </record>
 
     <record model="ir.actions.act_window" id="category_forecast">
-        <field name="name">Category</field>
+        <field name="name">Kategori</field>
         <field name="res_model">category.forecast</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Create New Category
+            <p class="oe_view_nocontent_create">Buat kategori baru 
             </p>
         </field>
     </record>
@@ -52,55 +59,56 @@
     />
 	
     <menuitem
-        id="forecast"
+        id="forecast_menu"
         name="Forecast"
         parent="main_menu"
+        action="report_forecast"
     />
 	
     <menuitem 
         id="menu_cashin" 
-        name="Cash In" 
+        name="Pemasukan" 
         parent="main_menu"
     />
 
     <menuitem 
         id="receivable_menu" 
-        name="Receivable" 
+        name="Piutang" 
         parent="menu_cashin"
         action="receivable_forecast"
     />
 	
     <menuitem
         id="menu_cashout"
-        name="Cash Out"
+        name="Pengeluaran"
         parent="main_menu"
     />
 
     <menuitem
         id="payable_menu"
-        name="Payable"
+        name="Hutang"
         parent="menu_cashout"
         action="payable_forecast"
     />
 	
 	<menuitem
         id="others_menu"
-        name="Others"
+        name="Lain-lain"
         parent="menu_cashout"
         action="others_forecast"
     />
 
     <menuitem
         id="menu_configuration"
-        name="Configuration"
+        name="Pengaturan"
         parent="main_menu"
     />  
 
     <menuitem
         id="category_menu"
-        name="Category"
+        name="Kategori"
         parent="menu_configuration"
         action="category_forecast"
     />
-   
+
 </odoo>
