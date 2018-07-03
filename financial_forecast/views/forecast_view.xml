@@ -13,4 +13,29 @@
             </pivot>
         </field>
     </record>
+
+    <record id="view_form_forecast" model="ir.ui.view">
+        <field name="name">Forecase Form</field>
+        <field name="model">report.forecast</field>
+        <field name="arch" type="xml">
+            <form string="Report">
+                <header>
+                    
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="payable_id"/>
+							<field name="receivable_id"/>
+							<field name="others_id"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="saldo_awal"/>
+							<field name="total_biaya"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>
